@@ -1,4 +1,4 @@
-import styles from './css/Sidebar.module.css';
+import styles from './css/SideBar.module.css';
 
 const LimitedDashboard = () => (
     <div className={styles.limitedDashboard}>
