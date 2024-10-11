@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation ,Link} from 'react-router-dom';
-import styles from './css/Sidebar.module.css';
+import styles from './css/SideBar.module.css';
 
 const Sidebar = ({ role, errorMessage  }) => {
   const navigate = useNavigate();
