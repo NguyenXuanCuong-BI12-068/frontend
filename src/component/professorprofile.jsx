@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Card, CardContent, Avatar, Typography, Button, TextField } from '@mui/material';
 import Header from './Header';
 import Sidebar from './Sidebar';
-import styles from './css/ProfessorProfile.module.css';
+import styles from './css/professorprofile.module.css';
 import professorservice from '../services/professorService';
 import avartar from '../assets/images/business-man.png';
 import LimitedSidebar from './LimitedSidebar';
