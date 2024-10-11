@@ -1,0 +1,80 @@
+/* NoteComponent.module.css */
+
+.noteComponent {
+    background-color: #f4f4f4; /* Light background for the notes area */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    font-size: 24px;
+    color: #333; /* Dark color for the header */
+    margin-bottom: 20px;
+  }
+  
+  .addNoteForm {
+    margin-bottom: 20px; /* Spacing below the add note form */
+  }
+  
+  textarea {
+    width: 100%; /* Full width for the textarea */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allow vertical resizing only */
+    margin-bottom: 10px; /* Spacing below the textarea */
+  }
+  
+  button {
+    background-color: #3498db; /* Blue background for buttons */
+    color: white; /* White text */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+  }
+  
+  .noteList {
+    margin-top: 20px; /* Spacing above the notes list */
+  }
+  
+  .noteItem {
+    background-color: #fff; /* White background for each note */
+    padding: 15px;
+    margin-bottom: 10px; /* Spacing between notes */
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .noteTextarea {
+    width: 100%; /* Full width for the editing textarea */
+    margin-bottom: 10px; /* Spacing below the textarea */
+  }
+  
+  .saveButton, .cancelButton, .editButton, .deleteButton {
+    margin-right: 5px; /* Spacing between buttons */
+  }
+  
+  .editButton {
+    background-color: #f39c12; /* Orange for edit button */
+    margin-left: 5px;
+  }
+  
+  .editButton:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+  }
+  
+  .deleteButton {
+    background-color: #e74c3c; /* Red for delete button */
+  }
+  
+  .deleteButton:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
+  

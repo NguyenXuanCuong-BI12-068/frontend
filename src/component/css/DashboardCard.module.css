@@ -1,0 +1,58 @@
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.1);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .iconContainer {
+    background-color: #f2f2f2;
+    color: #fff;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+  }
+
+
+  
+  .content {
+    flex-grow: 1;
+  }
+  
+  .title {
+    font-size: 20px;
+    color: #67748e;
+    margin: 0 0 8px 0;
+  }
+  
+  .count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+  }
+  
+  .percentage {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .percentage span {
+    font-weight: bold;
+    margin-right: 4px;
+  }
+  
+  .success {
+    color: #4caf50;
+  }
+  
+  .error {
+    color: #f44336;
+  }
+  

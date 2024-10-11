@@ -1,0 +1,110 @@
+.footer {
+    padding: 7rem 0;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem 1rem;
+  }
+  
+  .section {
+    max-width: 300px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionText {
+    color: #4a5568;
+  }
+  
+  .linksContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
+  .linkList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .linkItem {
+    cursor: pointer;
+    transition: color 0.2s;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .linkItem:hover {
+    color: #4299e1;
+  }
+  
+  .inputContainer {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .input {
+    padding: 1rem;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    background-color: white;
+    width: 100%;
+    border: none;
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .button {
+    background-color: #4299e1;
+    color: white;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    cursor: pointer;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 0.75rem;
+  }
+  
+  .socialLink {
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+  }
+  
+  .socialLink:hover {
+    color: #4299e1;
+    transform: scale(1.05);
+  }
+  
+  @media (min-width: 768px) {
+    .gridContainer {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .gridContainer {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  

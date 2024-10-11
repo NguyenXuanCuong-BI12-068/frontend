@@ -1,0 +1,103 @@
+/* Main container styles */
+.container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 19%;
+  }
+  
+  /* Heading styles */
+  .textual {
+    color: darkred;
+    margin-bottom: 15px;
+  }
+  
+  /* Form group styles */
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  /* Form control styles */
+  .formControl {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .formControl:focus {
+    border-color: darkred;
+    outline: none;
+  }
+  
+  /* Button styles */
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Success button */
+  .btnSuccess {
+    background-color: darkgreen;
+    color: white;
+  }
+  
+  .btnSuccess:hover {
+    background-color: green;
+  }
+  
+  /* Danger button */
+  .btnDanger {
+    background-color: darkred;
+    color: white;
+  }
+  
+  .btnDanger:hover {
+    background-color: red;
+  }
+  
+  /* Register button */
+  .btnRegister {
+    background-color: darkblue;
+    color: white;
+  }
+  
+  .btnRegister:hover {
+    background-color: blue;
+  }
+  
+  /* Text danger styles */
+  .textDanger {
+    color: darkred;
+  }
+  
+  /* Checkbox styles */
+  .checkbox {
+    margin-top: 10px;
+  }
+  
+  /* Small text styles */
+  small {
+    font-size: 14px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .formControl {
+      font-size: 14px;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }
+  

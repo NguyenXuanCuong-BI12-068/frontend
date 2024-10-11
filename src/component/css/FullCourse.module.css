@@ -1,0 +1,157 @@
+/* FullCourse.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.videoContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.youtubeEmbed {
+    border-radius: 10px;
+}
+
+.chapterList {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chapter {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.chapter:hover {
+    background-color: #f5f5f5;
+    transform: translateX(5px);
+}
+
+.selected {
+    background-color: #cce5ff; /* Highlight selected chapter */
+}
+
+.box {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.name {
+    font-size: 18px;
+}
+.chapter .name {
+    font-weight: 500;
+    color: #333;
+}
+
+.subContainer {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subBtns {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.descriptions {
+    display: none; /* Initially hidden, shown via JS */
+}
+
+.inputContainer {
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.inputContainer__input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: #f0f4f8;
+    border-radius: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.inputContainer__input:focus {
+    outline: none;
+    border-color: #0056b3; /* Darker shade on focus */
+    background-color: white;
+    box-shadow: 0 0 0 2px #007bff;
+}
+
+h2 {
+    color: darkgreen;
+    margin-bottom: 20px;
+}
+
+.commentContainer {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.comment {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.comment:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.errorMessage {
+    color: red;
+    font-weight: bold;
+}
+
+.successMessage {
+    color: green;
+    font-weight: bold;
+}

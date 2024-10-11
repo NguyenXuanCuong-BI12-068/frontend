@@ -1,0 +1,52 @@
+.profileContainer {
+    padding: 20px;
+    margin-left: 19%;
+    border: 10px solid #e0e0e0;
+  }
+  
+  .profileHeader {
+    background-image: url('frontend/src/assets/images/backgroundimage.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .profileHeaderContent {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .largeAvatar {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto 20px;
+    border: 3px solid white;
+  }
+  
+  .editButton {
+    margin-top: 20px !important;
+  }
+  
+  .formField {
+    margin-bottom: 15px !important;
+  }
+  
+  .buttonGroup {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Add these styles for better text visibility on transparent background */
+  .profileHeaderContent h4,
+  .profileHeaderContent p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  

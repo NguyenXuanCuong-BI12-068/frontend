@@ -1,0 +1,121 @@
+.hero {
+    background-color: #f7fafc;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 650px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .brandInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.5rem 0;
+    position: relative;
+    z-index: 20;
+  }
+  
+  .textContent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  .highlight {
+    color: #4299e1;
+  }
+  
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .primaryBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primaryBtn:hover {
+    background-color: #3182ce;
+  }
+  
+  .arrowIcon {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .primaryBtn:hover .arrowIcon {
+    transform: translateX(0.25rem) rotate(-45deg);
+  }
+  
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .heroImage {
+    width: 400px;
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+  }
+  
+  .blobImage {
+    position: absolute;
+    bottom: -8rem;
+    width: 800px;
+    z-index: 1;
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .textContent {
+      text-align: left;
+      max-width: 400px;
+    }
+  
+    .buttonWrapper {
+      justify-content: flex-start;
+    }
+  
+    .blobImage {
+      display: block;
+      width: 1500px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .heroImage {
+      width: 600px;
+    }
+  }
+  

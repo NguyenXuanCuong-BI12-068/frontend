@@ -1,0 +1,63 @@
+/* UserList.module.css */
+/* General panel styles */
+.panel {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-left: 19%;
+  }
+  
+  .panelHeading {
+    margin-bottom: 15px;
+    margin-left: 45%;
+  }
+  
+  .panelHeading h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .panelBody {
+    overflow-x: auto;
+  }
+  
+  /* Table styles */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+  }
+  
+  .tableBordered th, .tableBordered td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .tableBordered th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Row styles */
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .panel {
+      padding: 10px;
+    }
+  
+    .panelHeading h2 {
+      font-size: 20px;
+    }
+  
+    .table {
+      font-size: 14px;
+    }
+  }
+  
