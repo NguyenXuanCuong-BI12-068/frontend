@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 class UserService {
-    static BASE_URL = "https://backend-v3ko.onrender.com";
+    static BASE_URL = "https://backend-2d8n.onrender.com";
 
     // User login method
     static loginUser(email, password) {
