@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import userservice from '../services/userService';
-import styles from './css/MyCourse.module.css';
+import styles from './css/Mycourse.module.css';
 import Header from './Header';
 import Sidebar from './Sidebar';
 
