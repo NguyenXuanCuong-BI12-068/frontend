@@ -1,7 +1,7 @@
 import axios from 'axios';
 
   const api = axios.create({
-    baseURL: "http://localhost:8080/api/comments",
+    baseURL: "https://backend-v3ko.onrender.com/api/comments",
     headers: {
         'Content-Type': 'application/json',
     },

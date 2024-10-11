@@ -1,7 +1,7 @@
 // adminService.js
 import axios from 'axios';
 
-const NAV_URL = "http://localhost:8080"; 
+const NAV_URL = "https://backend-v3ko.onrender.com"; 
 
 export const adminService = {
   addProfessor: (professor) => {
