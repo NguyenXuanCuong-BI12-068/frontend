@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+import {NavLink} from 'react-router-dom';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Blob from "../../../assets/images/welcome/blob.svg";
 import HeroPng from "../../../assets/images/lms-bg.png";
@@ -49,10 +50,13 @@ const Hero = () => {
               animate="animate"
               className={styles.buttonWrapper}
             >
-              <button className={styles.primaryBtn}>
+               <NavLink to="/login">
+               <button className={styles.primaryBtn}>
                 Get Started
                 <IoIosArrowRoundForward className={styles.arrowIcon} />
               </button>
+            </NavLink>
+              
             </motion.div>
           </div>
         </div>
