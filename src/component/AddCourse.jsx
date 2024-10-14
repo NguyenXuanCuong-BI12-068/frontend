@@ -12,7 +12,7 @@ const AddCourse = () => {
     youtubeurl: '',
     coursetype: '',
     language: '',
-    enrolleddate: '',
+    enrolleddate: new Date().toISOString().split('T')[0],
     instructorinstitution: '',
     websiteurl: '',
     skilllevel: '',
@@ -196,16 +196,14 @@ const AddCourse = () => {
             </div>
             <div className={styles.formColumn}>
               <div className={styles.formGroup}>
-                <label>Enrolled Date: <b style={{ color: 'red' }}>*</b></label>
+                <label>Enrolled Date:</label>
                 <input
                   type="date"
                   className={styles.formControl}
                   name="enrolleddate"
-                  value={course.enrolleddate}
-                  onChange={handleChange}
-                  required
+                  value={new Date().toISOString().split('T')[0]}
+                  readOnly
                 />
-                
               </div>
               <div className={styles.formGroup}>
                 <label>Instructor Institution Name: <b style={{ color: 'red' }}>*</b></label>
