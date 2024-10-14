@@ -14,6 +14,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import userservice from '../services/userService';
+import professorservice from '../services/professorService';
 
 const UserDashboard = () => {
   const [loggedUser, setLoggedUser] = useState('');
@@ -24,11 +25,22 @@ const UserDashboard = () => {
   const [chapters, setChapters] = useState(0); 
   const [myEnrollments, setMyEnrollments] = useState([]);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const [newReleaseCourses, setNewReleaseCourses] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     setLoggedUser(sessionStorage.getItem('loggedUser') || '');
     setCurrRole(sessionStorage.getItem('ROLE') || '');
+
+    const fetchNewReleaseCourses = async () => {
+      try {
+        const response = await professorservice.getCoursesUploadedToday();
+        console.log("New release courses:", response);
+        setNewReleaseCourses(response);
+      } catch (error) {
+        console.error('Error fetching new release courses:', error);
+      }
+    };
 
     const fetchData = async () => {
       try {
@@ -56,7 +68,10 @@ const UserDashboard = () => {
       setMyEnrollments(enrollments);
     };
     fetchData();
-    fetchEnrollments();
+    if (loggedUser && currRole) {
+      fetchEnrollments();
+    }
+    fetchNewReleaseCourses();
   }, [loggedUser, currRole,refreshTrigger]);
   
 
@@ -218,6 +233,59 @@ const UserDashboard = () => {
               )
             )}
           </div>
+          <div className={styles.headingText}>
+              <b><i className="fa fa-star"></i> New Release Courses Today</b>
+            </div>
+            <div className={styles.courseCardContainer}>
+              {newReleaseCourses && newReleaseCourses.length > 0 && (
+                newReleaseCourses.length <= 2 ? (
+                  <div className={styles.staticCourses}>
+                    {newReleaseCourses.map(data => (
+                      <div className={styles.card} key={data.courseid}>
+                        <img src={ImageUrl} className={styles.courseImage} alt="Course" />
+                        <hr />
+                        <div className={styles.cardBody}>
+                          <h4 className={styles.cardTitle}>{data.coursename}</h4>
+                          <h6 className={styles.courseId}>{data.courseid}</h6>
+                          <p><b>{data.description}</b></p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : newReleaseCourses.length === 3 ? (
+                  <div className={styles.staticCourses}>
+                    {newReleaseCourses.map(data => (
+                      <div className={styles.card} key={data.courseid}>
+                        <img src={ImageUrl} className={styles.courseImage} alt="Course" />
+                        <hr />
+                        <div className={styles.cardBody}>
+                          <h4 className={styles.cardTitle}>{data.coursename}</h4>
+                          <h6 className={styles.courseId}>{data.courseid}</h6>
+                          <p><b>{data.description}</b></p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <Slider {...sliderSettings} afterChange={refreshEnrollments}>
+                    {newReleaseCourses.map(data => (
+                      <div className={styles.card} key={data.courseid}>
+                        <img src={ImageUrl} className={styles.courseImage} alt="Course" />
+                        <hr />
+                        <div className={styles.cardBody}>
+                          <h4 className={styles.cardTitle}>{data.coursename}</h4>
+                          <h6 className={styles.courseId}>{data.courseid}</h6>
+                          <p><b>{data.description}</b></p>
+                        </div>
+                      </div>
+                    ))}
+                  </Slider>
+                )
+              )}
+              {(!newReleaseCourses || newReleaseCourses.length === 0) && (
+                <p>No new courses released today.</p>
+              )}
+            </div>
         </div>
       </div>
     </>

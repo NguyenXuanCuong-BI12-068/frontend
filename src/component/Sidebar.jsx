@@ -27,6 +27,7 @@ const Sidebar = ({ role, errorMessage  }) => {
         { path: '/addchapter', label: 'Add Chapters', icon: 'fa fa-book' },
         { path: '/mycourses', label: 'My Courses', icon: 'fa fa-graduation-cap' },
         { path: '/mywishlist', label: 'My Wishlist', icon: 'fa fa-heart' },
+        { path: '/manageprofessorcourses', label: 'Manage your courses', icon: 'fa fa-heart' },
         { path: '/courselist', label: 'Course List', icon: 'fa fa-list' },
       ],
       admin: [

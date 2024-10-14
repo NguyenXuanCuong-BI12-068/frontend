@@ -202,5 +202,37 @@ class professorservice {
             return [];
         }
     };
+
+    static listCoursesByProfessor = async (email) => {
+        try {
+            const response = await api.get(`/listCourse/${email}`);
+            return response.data;
+        } catch (error) {
+            console.error(error);
+            return [];
+        }
+    };
+    static editCourse = async (email, coursename, updatedCourse) => {
+        try {
+          const response = await api.put(`/editCourse/${email}/${coursename}`, 
+            updatedCourse,
+            { headers: { 'Content-Type': 'application/json' } }
+          );
+          return response.data;
+        } catch (error) {
+          console.error(error);
+          throw error;
+        }
+      };
+
+      static getCoursesUploadedToday = async () => {
+        try {
+            const response = await api.get("/courses/uploaded-today");
+            return response.data;
+        } catch (error) {
+            console.error(error);
+            return [];
+        }
+    };
 }
 export default professorservice;
