@@ -224,8 +224,8 @@ class professorservice {
           throw error;
         }
       };
-
-      static getCoursesUploadedToday = async () => {
+      
+    static getCoursesUploadedToday = async () => {
         try {
             const response = await api.get("/courses/uploaded-today");
             return response.data;
