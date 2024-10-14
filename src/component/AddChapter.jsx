@@ -16,7 +16,7 @@ const AddChapter = () => {
 
   useEffect(() => {
     const fetchCourses = async () => {
-      const courses = await professorservice.getCourseNames();
+      const courses = await professorservice.getCourseNames(loggedUser);
       setCourseNames(courses);
     };
     fetchCourses();
