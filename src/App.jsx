@@ -18,8 +18,9 @@ import UserProfile from './component/UserProfile';
 import ProfessorList from './component/ProfressorList';
 import UserList from './component/UserList';
 import FullCourse from './component/FullCourse';
-import WelcomePage from './component/WelcomePage';
 import Welcome from './component/WelcomePage/Welcome';
+import ProtectedRoute from './ProtectedRoute';
+import ManageProfessorCourses from './component/ManageProfessorCourses';
 
 function App() {
   return (
@@ -29,24 +30,25 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/registersuccess" element={<RegisterSuccess />} />
-        <Route path="/userdashboard" element={<UserDashboard />} />
-        <Route path="/professordashboard" element={<ProfessorDashboard />} />
-        <Route path="/admindashboard" element={<AdminDashboard />} />
-        <Route path="/addProfessor" element={<AddProfessor />} />
-        <Route path="/addCourse" element={<AddCourse />} />
-        <Route path="/addchapter" element={<AddChapter />} />
-        <Route path="/courselist" element={<Courselist />} />
-        <Route path="/mycourses" element={<MyCourses />} />
-        <Route path="/mywishlist" element={<MyWishlist />} />
-        <Route path="/editprofessorprofile" element={<ProfessorProfile />} />
-        <Route path="/approveprofessor" element={<ApprovalStatus />} />
-        <Route path="/edituserprofile" element={<UserProfile />} />
-        <Route path="/professorlist" element={<ProfessorList />} />
-        <Route path="/userlist" element={<UserList />} />
-        <Route path="/fullcourse/:coursename" element={<FullCourse />} />
+        
+        <Route path="/userdashboard" element={<ProtectedRoute><UserDashboard /></ProtectedRoute>} />
+        <Route path="/professordashboard" element={<ProtectedRoute><ProfessorDashboard /></ProtectedRoute>} />
+        <Route path="/admindashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+        <Route path="/addProfessor" element={<ProtectedRoute><AddProfessor /></ProtectedRoute>} />
+        <Route path="/addCourse" element={<ProtectedRoute><AddCourse /></ProtectedRoute>} />
+        <Route path="/addchapter" element={<ProtectedRoute><AddChapter /></ProtectedRoute>} />
+        <Route path="/courselist" element={<ProtectedRoute><Courselist /></ProtectedRoute>} />
+        <Route path="/mycourses" element={<ProtectedRoute><MyCourses /></ProtectedRoute>} />
+        <Route path="/mywishlist" element={<ProtectedRoute><MyWishlist /></ProtectedRoute>} />
+        <Route path="/editprofessorprofile" element={<ProtectedRoute><ProfessorProfile /></ProtectedRoute>} />
+        <Route path="/approveprofessor" element={<ProtectedRoute><ApprovalStatus /></ProtectedRoute>} />
+        <Route path="/edituserprofile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
+        <Route path="/professorlist" element={<ProtectedRoute><ProfessorList /></ProtectedRoute>} />
+        <Route path="/userlist" element={<ProtectedRoute><UserList /></ProtectedRoute>} />
+        <Route path="/manageprofessorcourses" element={<ProtectedRoute><ManageProfessorCourses /></ProtectedRoute>} />
+        <Route path="/fullcourse/:coursename" element={<ProtectedRoute><FullCourse /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
-
   );
 }
 
